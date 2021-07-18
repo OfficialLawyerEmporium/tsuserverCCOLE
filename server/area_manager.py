@@ -238,6 +238,8 @@ class AreaManager:
 			for c in self.clients:
 				c.send_command(cmd, *args)
 
+		# This is called as part of cmd_net_ms, the IC message handler,
+		# in aoprotocol.py.
 		def send_owner_command(self, cmd, *args):
 			"""
 			Send an AO-compatible command to all owners of the area
